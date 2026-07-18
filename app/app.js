@@ -1364,9 +1364,19 @@
                     <button id="close-landing-btn" class="landing-modal-close-btn" title="Close (Esc)">&times;</button>
                     <div id="landing-modal-body" class="landing-modal-body">
                         <div class="landing-header">
-                            <h1>💎 Anima Turbo 1.0 — Style Explorer</h1>
+                            <h1>💎 Anima Base + Turbo — Style Explorer</h1>
                         </div>
-                        <blockquote>Dual HD benchmarks for Anima Turbo and Anima Base + Turbo LoRA. 43,000+ unique styles & 86,400+ Total Generations. Pure Aesthetics. Zero Guesswork.</blockquote>
+                        <blockquote>Dual HD benchmarks for Anima Base 1.0 and Anima Turbo 1.0. 43,000+ unique styles & 86,400+ Total Generations. Pure Aesthetics. Zero Guesswork.</blockquote>
+                        <div class="landing-carousel-container">
+                            <div class="carousel-frame">
+                                <div class="carousel-images">
+                                    <div class="carousel-slide">
+                                        <span class="carousel-zoom-btn"></span>
+                                        <img src="images/landing/Anima Base - Style Explorer.webp" alt="Anima Base - Style Explorer" class="carousel-image" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="landing-carousel-container">
                             <div class="carousel-frame">
                                 <div class="carousel-images">
@@ -1377,19 +1387,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="landing-carousel-container">
-                            <div class="carousel-frame">
-                                <div class="carousel-images">
-                                    <div class="carousel-slide">
-                                        <span class="carousel-zoom-btn"></span>
-                                        <img src="images/landing/Anima Base (Turbo) - Style Explorer.webp" alt="Anima Base (Turbo) - Style Explorer" class="carousel-image" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <hr>
                         <ul class="features-list">
-                        <li><span class="feature-icon">🚀</span><strong>Anima Turbo 1.0 - New HD Benchmark:</strong><span>Every style has been generated in <strong>high resolution (832x1216)</strong> using the <strong>Turbo 1.0</strong> model. See how each artist’s DNA interacts with the <strong>character, lighting, and environments</strong>. Know exactly how a style performs before you hit generate.</span></li>
+                        <li><span class="feature-icon">⚡</span><strong>Anima Base 1.0 - HD Benchmark:</strong><span>Generated in high resolution using <strong>Anima Base 1.0 + Turbo LoRA 0.2</strong>. This edition highlights <strong>expressive aesthetics and intense detail</strong>, delivering a powerful <strong>"artistic punch"</strong> that brings out a distinct and recognizable identity for every style.</span></li>
+                        </ul>
+                        <div class="landing-carousel-container collage-carousel" data-has-arrows="true">
+                            <div class="carousel-frame">
+                                <div class="carousel-images">
+                                    ${Array.from({ length: 40 }, (_, i) => `
+                                    <div class="carousel-slide">
+                                        <span class="carousel-zoom-btn"></span>
+                                        <img src="images/landing/base/${i + 1}.webp" alt="Collage Example ${i + 1}" class="carousel-image" loading="lazy">
+                                    </div>
+                                    `).join('')}
+                                </div>
+                                <button class="carousel-arrow prev" data-direction="-1">&#10094;</button>
+                                <button class="carousel-arrow next" data-direction="1">&#10095;</button>
+                            </div>
+                            <div class="carousel-counter">
+                                <span class="current-slide-number">1</span> / 40
+                            </div>
+                        </div>
+                        <ul class="features-list">
+                        <li><span class="feature-icon">🚀</span><strong>Anima Turbo 1.0 - HD Benchmark:</strong><span>Every style has been generated in <strong>high resolution (832x1216)</strong> using the <strong>Turbo 1.0</strong> model. See how each artist’s DNA interacts with the <strong>character, lighting, and environments</strong>. Know exactly how a style performs before you hit generate.</span></li>
                         </ul>
                         <div class="landing-carousel-container collage-carousel" data-has-arrows="true">
                             <div class="carousel-frame">
@@ -1408,29 +1428,8 @@
                                 <span class="current-slide-number">1</span> / 40
                             </div>
                         </div>    
-                            <ul class="features-list">
-                        <li><span class="feature-icon">⚡</span><strong>Anima Base + Turbo LoRA - HD Benchmark:</strong><span>Generated in high resolution using <strong>Anima Base 1.0 + Turbo LoRA 0.2</strong>. This edition highlights <strong>expressive aesthetics and intense detail</strong>, delivering a powerful <strong>"artistic punch"</strong> that brings out a distinct and recognizable identity for every style.</span></li>
-                        </ul>
-                        <div class="landing-carousel-container collage-carousel" data-has-arrows="true">
-                            <div class="carousel-frame">
-                                <div class="carousel-images">
-                                    ${Array.from({ length: 40 }, (_, i) => `
-                                    <div class="carousel-slide">
-                                        <span class="carousel-zoom-btn"></span>
-                                        <img src="images/landing/turbo-lora/${i + 1}.webp" alt="Collage Example ${i + 1}" class="carousel-image" loading="lazy">
-                                    </div>
-                                    `).join('')}
-                                </div>
-                                <button class="carousel-arrow prev" data-direction="-1">&#10094;</button>
-                                <button class="carousel-arrow next" data-direction="1">&#10095;</button>
-                            </div>
-                            <div class="carousel-counter">
-                                <span class="current-slide-number">1</span> / 40
-                            </div>
-                        </div>
                         <ul class="features-list">
                         <li><span class="feature-icon">🎯</span><strong>Balanced Quality Modifiers:</strong><span>Generated with <code>masterpiece</code>, <code>best quality</code> for a polished look that <strong>keeps the true artist's DNA</strong>. This ensures your generation results closely match the preview. <strong>Note:</strong> No <code><strong>score_*</strong></code> tags were used to avoid stylistic distortion.</span></li>
-                        <li><span class="feature-icon">🧬</span><strong>Pure Stylistic Integrity:</strong><span>All previews are generated using the <strong>Euler sampler</strong> for maximum stylistic fidelity. Unlike stochastic samplers (like ER_SDE) that inject noise at every step and cause stylistic drift, Euler provides a <strong>faithful and precise output.</strong></span></li>
                         <li><span class="feature-icon">🔍</span><strong>Verified Artist Database:</strong><span>The <strong>Danbooru/Gelbooru</strong> artist list is curated based on the <strong>September 2025 knowledge cut-off</strong>. This ensures high-probability recognition by Anima for authentic stylistic influence.</span></li>
                         <li><span class="feature-icon">🧠</span><strong>Visual DNA Over Volume:</strong><span>Anima is a "master" of anime basics, so it only needs <strong>40–60 works</strong> to isolate a unique signature. A distinct artistic deviation in a small set is far more powerful than 500 works of "standard" anime that offer nothing new to capture.</span></li>
                         <li><span class="feature-icon">📊</span><strong>Data-Driven Sorting:</strong><span>Sorting is powered by processed metadata from <strong>9,113,285</strong> Danbooru images to reflect actual community engagement. Discover artists by <strong>Avg. Favs</strong> - Average favorites per post or <strong>Avg. Score</strong> - Average community rating per post. <br>Metadata source: <a href="https://huggingface.co/datasets/trojblue/danbooru2025-metadata" target="_blank">Hugging Face</a></span></li>
@@ -1633,34 +1632,36 @@
     // --- Timed Promo Modal Logic (Dynamically Loaded) ---
     function setupTimedPromoModal() {
         const mainCtaBtn = document.getElementById('open-landing-btn');
-        if (!mainCtaBtn) return; // Если основной кнопки нет, ничего не делаем
+        if (!mainCtaBtn) return;
 
-        const PROMO_TIMESTAMP_KEY = 'promoLastShownV3'; // Новая версия ключа для новой логики
-        const ONE_DAY_MS = 1 * 24 * 60 * 60 * 1000; // 24 часа в миллисекундах
-        const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000; // 48 часов в миллисекундах
+        const PROMO_TIMESTAMP_KEY = 'promoLastShownV3'; 
+        const PROMO_DISABLED_KEY = 'promoNeverShowAgain';
+        const COOLDOWN_MS = 1 * 24 * 60 * 60 * 1000;
+
+    
+        if (localStorage.getItem(PROMO_DISABLED_KEY) === 'true') {
+            return;
+        }
 
         const lastShown = localStorage.getItem(PROMO_TIMESTAMP_KEY);
         const now = Date.now();
         
-        let promoTimeout; // Объявляем переменную для хранения ID таймера
-        // Показываем окно, только если запись отсутствует или прошло достаточно времени
-        if (!lastShown || (now - parseInt(lastShown, 10) > ONE_DAY_MS)) { // Используем 1 день как минимальный интервал
-            // Небольшая задержка перед показом, чтобы не было слишком навязчиво
-            promoTimeout = setTimeout(() => {
+
+        if (!lastShown || (now - parseInt(lastShown, 10) > COOLDOWN_MS)) { 
+            setTimeout(() => {
                 createAndShowPromoModal();
             }, 25000);
         }
 
         function createAndShowPromoModal() {
-            // Проверяем, не открыто ли уже основное модальное окно.
+   
             const mainLandingModal = document.getElementById('landing-modal');
             if (mainLandingModal && mainLandingModal.classList.contains('visible')) {
-                // Если основной лендинг открыт, не показываем промо, но ставим таймер на 1 день.
-                localStorage.setItem(PROMO_TIMESTAMP_KEY, Date.now().toString());
-                return; // Выходим, не показывая промо-окно
+ 
+                return; 
             }
 
-            // Если модальное окно уже есть в DOM, просто показываем его
+
             let promoModal = document.getElementById('promo-modal');
             if (promoModal) {
                 document.body.classList.add('body-scroll-lock');
@@ -1668,14 +1669,14 @@
                 return;
             }
 
-            // Создаем HTML-структуру модального окна
+
            const modalHTML = `
             <div id="promo-modal" class="promo-modal-overlay">
                 <div class="promo-modal-content">
-                    <button id="promo-modal-close-btn" class="promo-modal-close-btn" title="Close">&times;</button>
+                    <button id="promo-modal-close-btn" class="promo-modal-close-btn" title="Close (Esc)">&times;</button>
                     <div class="promo-modal-body">
                         <div class="promo-header">
-                            <h1>💎Anima Turbo 1.0 — Style Explorer</h1>
+                            <h1>💎 Anima Base + Anima Turbo — Style Explorer</h1>
                             <p>Dual HD Benchmarks: 43,000+ Styles & 86,400+ Previews. Pure Aesthetics. Zero Guesswork.</p>
                         </div>
                         <div class="landing-carousel-container">
@@ -1683,19 +1684,24 @@
                                 <div class="carousel-images">
                                     <div class="carousel-slide">
                                         <span class="carousel-zoom-btn"></span>
-                                        <img src="images/landing/turbo-popup.webp" alt="Anima Base (Turbo) - Style Explorer" class="carousel-image" loading="lazy">
+                                        <img src="images/landing/base-popup.webp" alt="Anima Base - Style Explorer" class="carousel-image" loading="lazy">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <ul class="promo-features-list">
-                            <li><span class="promo-feature-icon">⚡</span><strong>Double Benchmark Expansion</strong>Explore 43,000+ unique styles across dual benchmarks: Anima Turbo 1.0 and Anima Base 1.0 + Turbo LoRA.</li>
+                            <li><span class="promo-feature-icon">⚡</span><strong>Double Benchmark Expansion</strong>Explore 43,000+ unique styles across dual benchmarks: Anima Base 1.0 and Anima Turbo 1.0.</li>
                             <li><span class="promo-feature-icon">🔄</span><strong>Seamless Library Migration</strong>Keep your library. Quickly import your existing styles and folders directly into the new interface.</li>
                             <li><span class="promo-feature-icon">🌟</span><strong>Uniqueness Rating (v2)</strong>An updated algorithm identifies "hidden gems" and standout styles in seconds.</li>
                             <li><span class="promo-feature-icon">💻</span><strong>100% Offline Performance</strong>Zero servers, zero lag. Run the entire library locally with total privacy and instant response.</li>
                         </ul>
                         <a href="#" id="promo-cta-btn" class="promo-cta-button">💎 EXPLORE ALL FEATURES</a>
                         <small class="promo-cta-subtext">Click to see everything included. Early Bird access inside.</small>
+                        
+                        <!-- НОВАЯ КНОПКА ОТКЛЮЧЕНИЯ -->
+                        <div class="promo-footer-actions">
+                            <button id="promo-never-show-btn" class="promo-never-show-link">Don't show this again</button>
+                        </div>
                     </div>
                 </div>
             </div>`;
@@ -1703,39 +1709,47 @@
             document.body.insertAdjacentHTML('beforeend', modalHTML);
             promoModal = document.getElementById('promo-modal');
             
-            // Добавляем обработчики событий к новым элементам
+
             const closeBtn = document.getElementById('promo-modal-close-btn');
             const ctaBtn = document.getElementById('promo-cta-btn');
+            const neverShowBtn = document.getElementById('promo-never-show-btn');
+
 
             const hideAndSetTimestamp = () => {
-                // Если промо-окно было показано, ставим таймер на 2 дня.
                 document.body.classList.remove('body-scroll-lock');
                 promoModal.classList.remove('visible');
-                // [FIX] Устанавливаем таймер на 48 часов (2 дня).
-                // Предыдущая логика была некорректной и приводила к немедленному повторному показу.
-                // Теперь мы просто сохраняем текущее время, а проверка будет `now - lastShown > TWO_DAYS_MS`.
                 localStorage.setItem(PROMO_TIMESTAMP_KEY, Date.now().toString());
             };
 
+
             closeBtn.addEventListener('click', hideAndSetTimestamp);
-            // promoModal.addEventListener('click', (e) => { if (e.target === promoModal) hideAndSetTimestamp(); }); // Убрано закрытие по клику на фон
+
 
             ctaBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 hideAndSetTimestamp();
-                mainCtaBtn.click(); // Программно кликаем по основной кнопке
+                mainCtaBtn.click();
             });
 
-            // Показываем созданное окно
+
+            neverShowBtn.addEventListener('click', () => {
+                localStorage.setItem(PROMO_DISABLED_KEY, 'true');
+                document.body.classList.remove('body-scroll-lock');
+                promoModal.classList.remove('visible');
+                showToast('Promo popup disabled.');
+            });
+
+
+            const escListener = (e) => {
+                if (e.key === 'Escape' && promoModal.classList.contains('visible')) {
+                    hideAndSetTimestamp();
+                }
+            };
+            document.addEventListener('keydown', escListener);
+
+
             document.body.classList.add('body-scroll-lock');
             promoModal.classList.add('visible');
-        }
-
-        // Переносим проверку на 2 дня сюда, чтобы она применялась только после того,
-        // как пользователь взаимодействовал с окном.
-        if (lastShown && (now - parseInt(lastShown, 10) < TWO_DAYS_MS)) {
-            // Если с момента последнего показа прошло МЕНЬШЕ 2 дней, отменяем запланированный показ.
-            clearTimeout(promoTimeout);
         }
     }
 

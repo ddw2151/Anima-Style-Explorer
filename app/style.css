@@ -2498,3 +2498,25 @@ input[type="range"]::-webkit-slider-thumb {
 #promo-modal .carousel-zoom-btn {
     display: none !important;
 }
+
+
+
+.promo-footer-actions {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.promo-never-show-link {
+    background: none;
+    border: none;
+    color: var(--text-muted, #888888);
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    padding: 5px;
+}
+
+.promo-never-show-link:hover {
+    color: var(--accent-color, #ff4500);
+}
